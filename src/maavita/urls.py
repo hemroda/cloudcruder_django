@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from maavita.views import index
+from website.views import homepage, about
 
 urlpatterns = [
-    path('', index, name="index"),
+    path('', homepage, name="homepage"),
+    path('about', about, name="about"),
     path('blog/', include("blog.urls")),
     path('admin/', admin.site.urls),
 ]
