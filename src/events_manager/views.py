@@ -4,7 +4,9 @@ from events_manager.models import Event
 
 
 def events(request):
-    return render(request, "events_manager/events.html", {"events": Event.objects.all(), "num_events": Event.objects.count})
+    return render(request, "events_manager/events.html",
+                  {"page_title": "Events - Dashboard", "events": Event.objects.all(),
+                   "num_events": Event.objects.count})
 
 
 def event_detail(request, id):

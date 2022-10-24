@@ -1,21 +1,13 @@
-<!--{% load tailwind_tags %}-->
-<!--{% load static %}-->
+{% extends "base.html" %}
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Event - Maavita</title>
-  {% tailwind_css %}
-</head>
-<body>
-<main>
-    <h1>{{ event.title }}</h1>
-    {{ event }}
-    <p><a href="{% url 'events_path' %}" class="no-underline"><< Back to all events</a></p>
-</main>
-</body>
-</html>
+{% block main %}
+    <!--{% load static %}-->
+
+    <div class="container mx-auto flex flex-col my-12 md:my-10">
+        <div class="flex flex-col w-full pt-4 pb-16 lg:pb-24 px-6">
+            <h1 class="text-orange-800 font-bold text-6xl my-4 mb-8">Dashboard - Event detail</h1>
+            {{ event }}
+            <p class="mt-10 hover:text-orange-800"><a href="{% url 'events_path' %}" class="no-underline"><< Back to all events</a></p>
+        </div>
+    </div>
+{% endblock %}

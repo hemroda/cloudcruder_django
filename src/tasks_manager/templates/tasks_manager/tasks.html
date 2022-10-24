@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tasks - Maavita</title>
-</head>
-<body>
-  <h1>Tasks</h1>
-  <ul>
-      {% for task in tasks %}
-          <li>{{ task }}</li>
-      {% endfor %}
-  </ul>
+{% extends "base.html" %}
 
-<p><a href="{% url 'homepage' %}">Homepage</a></p>
-</body>
-</html>
+{% block main %}
+    <!--{% load static %}-->
+
+    <div class="container mx-auto flex flex-col my-12 md:my-10">
+        <div class="flex flex-col w-full pt-4 pb-16 lg:pb-24 px-6">
+            <h1 class="text-orange-800 font-bold text-6xl my-4 mb-8">Dashboard - Events
+                <small>({{ num_tasks }})</small></h1>
+            <ul>
+                {% for task in tasks %}
+                    <li>{{ task }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
