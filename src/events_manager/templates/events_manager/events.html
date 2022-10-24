@@ -9,7 +9,12 @@
 </head>
 <body>
 <main>
-    <h1>Events</h1>
+    <h1>Events <small>({{ num_events }})</small></h1>
+    <ul>
+        {% for event in events %}
+            <li><a href="{% url 'event_detail_path' event.id %}">{{ event }}</a></li>
+        {% endfor %}
+    </ul>
 </main>
 </body>
 </html>
