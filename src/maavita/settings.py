@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'blog',
+    'dashboard',
     'events_manager',
     'tasks_manager',
     'tailwind',

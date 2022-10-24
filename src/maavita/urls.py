@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 from website.views import homepage, about
+from dashboard.views import dashboard
 
 urlpatterns = [
     path('', homepage, name="homepage"),
+    path('dashboard/', dashboard, name="dashboard_root_path"),
     path('about', about, name="about"),
     path('blog/', include("blog.urls")),
-    path('events/', include("events_manager.urls")),
-    path('tasks/', include("tasks_manager.urls")),
+    path('dashboard/events/', include("events_manager.urls")),
+    path('dashboard/tasks/', include("tasks_manager.urls")),
     path('admin/', admin.site.urls),
 ]
