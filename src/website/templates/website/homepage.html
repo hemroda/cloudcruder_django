@@ -1,25 +1,13 @@
-<!--{% load tailwind_tags %}-->
-<!--{% load static %}-->
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maavita</title>
-  {% tailwind_css %}
-</head>
-<body class="antialiased">
-  <main>
-    <h1>Maavita</h1> 
-    <p>Welcome {{ name | upper  }},</p>
-    <div class="container mx-auto bg-gray-500 text-red-400">
-			<section class="flex items-center justify-center h-screen">
-				<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-			</section>
-		</div>
-  </main>
-  <footer><p>{{ footer_date | date:"Y" }}</p></footer>
-</body>
-</html>
+{% block main %}
+    <!--{% load static %}-->
+
+    <!--Hero-->
+    <div class="container mx-auto flex flex-col text-center items-center my-12 md:my-24">
+        <div class="flex flex-col w-full justify-center items-center pt-24 pb-16 lg:pb-24 px-6">
+            <h1 class="text-orange-800 font-bold text-6xl my-4 mb-8">Maavita</h1>
+            <h4 class="text-2xl">Jack of all trade master of none here 👋 😉</h4>
+        </div>
+    </div>
+{% endblock %}
