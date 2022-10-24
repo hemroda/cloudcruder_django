@@ -8,5 +8,12 @@
 </head>
 <body>
   <h1>Tasks</h1>
+  <ul>
+      {% for task in tasks %}
+          <li>{{ task }}</li>
+      {% endfor %}
+  </ul>
+
+<p><a href="{% url 'homepage' %}">Homepage</a></p>
 </body>
 </html>

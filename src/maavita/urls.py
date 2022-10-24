@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from tasks_manager.views import tasks, task
+
 from website.views import homepage, about
 
 urlpatterns = [
@@ -23,7 +23,6 @@ urlpatterns = [
     path('about', about, name="about"),
     path('blog/', include("blog.urls")),
     path('events/', include("events_manager.urls")),
-    path('tasks/', tasks, name="tasks"),
-    path('task/', task, name="task"),
+    path('tasks/', include("tasks_manager.urls")),
     path('admin/', admin.site.urls),
 ]
