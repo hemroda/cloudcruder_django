@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <!--{% load static %}-->
+
+    <div class="container mx-auto flex flex-col my-12 md:my-10">
+        <div class="flex flex-col w-full pt-4 pb-16 lg:pb-24 px-6">
+            <div class="w-full flex justify-between items-center">
+                <div>
+                    <h1 class="text-orange-800 font-bold text-6xl my-4 mb-8">Dashboard - Events
+                        <small>({{ num_events }})</small></h1>
+                </div>
+                <div>
+                    <a href="{% url 'new_event_path' %}" class="hover:text-orange-800">Add event</a>
+                </div>
+            </div>
+
+            <ul>
+                {% for event in events %}
+                    <li><a href="{% url 'event_detail_path' event.id %}">{{ event }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
