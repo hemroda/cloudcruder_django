@@ -16,7 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from apps.dashboard.views import dashboard
+from apps.website.views import homepage, about
+
 urlpatterns = [
+    path('', homepage, name="homepage"),
+    path('about', about, name="about"),
+    path('dashboard/', dashboard, name="dashboard_root_path"),
     path('dashboard/tasks/', include("apps.project_manager.urls")),
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
