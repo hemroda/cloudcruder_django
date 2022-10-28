@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # ---------------------------------
     'apps.dashboard.apps.DashboardConfig',
     'apps.project_manager.apps.ProjectManagerConfig',
+    'apps.events_manager.apps.EventsManagerConfig',
     'apps.website.apps.WebsiteConfig',
 ]
 
