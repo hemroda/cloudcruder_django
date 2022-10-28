@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # ---------------------------------
     'apps.dashboard.apps.DashboardConfig',
     'apps.project_manager.apps.ProjectManagerConfig',
+    'apps.website.apps.WebsiteConfig',
 ]
 
 MIDDLEWARE = [
