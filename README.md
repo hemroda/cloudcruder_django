@@ -7,14 +7,15 @@ Clone the repo.
 
 Make sure you have python3.10 installed. If not, run: `$ brew install python@3.10`  
 
-`$ source .env/bin/activate`  
-`$ pip install -r requirements.txt`  
+Create virtual env `$ python3 -m venv .venv`  
+Activate the virtual env `$ source .venv/bin/activate`  
+Install the dependencies `$ pip install -r requirements.txt`  
 
 
 ## Running the app
 
 To start your servers:  
-`$ cd src`  
+`$ cd backend`  
 `$ python manage.py runserver` to run the django server.  
 
 Open a new tab, make sure you are in `src/` then:  
