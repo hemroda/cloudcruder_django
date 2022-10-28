@@ -16,9 +16,9 @@ Install the dependencies `$ pip3.10 install -r requirements.txt`
 
 To start your servers:  
 `$ cd backend`  
-`$ python manage.py runserver` to run the django server.  
+`$ python3.10 manage.py runserver` to run the django server.  
 
-Open a new tab, make sure you are in `src/` then:  
-`$ python manage.py tailwind start`  
+Open a new tab, make sure you are in `backend/` then:  
+`$ python3.10 manage.py tailwind start`  
 
 Enjoy the headaches 😁
