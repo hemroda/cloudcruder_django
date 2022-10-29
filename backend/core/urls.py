@@ -23,9 +23,13 @@ urlpatterns = [
     path('', homepage, name="homepage"),
     path('about', about, name="about"),
     path('dashboard/', dashboard, name="dashboard_root_path"),
+    path('dashboard/campaigns/', include("apps.campaigns.urls")),
     path('dashboard/events/', include("apps.events_manager.urls")),
     path('dashboard/notes/', include("apps.notes.urls")),
     path('dashboard/tasks/', include("apps.project_manager.urls")),
+
+    path('api/', include("apps.campaigns.urls")),
+
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

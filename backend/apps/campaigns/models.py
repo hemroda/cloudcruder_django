@@ -5,7 +5,7 @@ from django.template.defaultfilters import slugify
 
 class Campaign(models.Model):
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=250)
+    slug = models.SlugField(max_length=250, null=True, blank=True)
     description = models.TextField(null=False, blank=False)
     logo = CloudinaryField('image', overwrite=True, format="jpg")
     created_at = models.DateTimeField(auto_now_add=True)
