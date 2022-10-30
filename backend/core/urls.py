@@ -25,6 +25,7 @@ urlpatterns = [
     path('dashboard/', dashboard, name="dashboard_root_path"),
     path('dashboard/campaigns/', include("apps.campaigns.urls")),
     path('dashboard/events/', include("apps.events_manager.urls")),
+    path('dashboard/incidents/', include("apps.incidents_manager.urls")),
     path('dashboard/notes/', include("apps.notes.urls")),
     path('dashboard/tasks/', include("apps.project_manager.urls")),
 
