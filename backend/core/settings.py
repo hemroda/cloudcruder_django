@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'apps.dashboard.apps.DashboardConfig',
     'apps.campaigns.apps.CampaignsConfig',
     'apps.events_manager.apps.EventsManagerConfig',
+    'apps.incidents_manager.apps.IncidentsManagerConfig',
     'apps.project_manager.apps.ProjectManagerConfig',
     'apps.notes.apps.NotesConfig',
     'apps.website.apps.WebsiteConfig',
