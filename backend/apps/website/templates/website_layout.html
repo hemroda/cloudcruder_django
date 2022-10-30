@@ -13,7 +13,7 @@
   {% tailwind_css %}
 </head>
 <body class="antialiased">
-<header class="showroom">
+<header class="website">
   <!-- navbar  -->
   <nav class="fixed top-0 inset-x-0 h-18 border-b border-gray-900 opacity-100">
     <div class="max-w-6xl mx-auto px-4">
@@ -73,13 +73,13 @@
     </div>
   </nav>
 </header>
-<main class="flex justify-center w-full mt-5 pt-5">
+<main class="website flex justify-center w-full mt-5 pt-5">
   <div class="w-full max-w-5xl mt-5 pt-5">
     {% block main %}
     {% endblock %}
   </div>
 </main>
-<footer class="showroom flex flex-col p-2 bottom-0 w-full text-gray-900 border-t border-gray-900">
+<footer class="website flex flex-col p-2 bottom-0 w-full text-gray-900 border-t border-gray-900">
   <div class="text-center p-6">
     <a class="text-gray-900 font-semibold" href="{% url 'dashboard_root_path' %}">Maavita</a>
     <span>© {{ footer_date | date:"Y" }} </span>
