@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'theme',
-    # 'django_browser_reload',
+    'django_browser_reload',
     # ---------------------------------
     # API-related apps
     # ---------------------------------
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'apps.incidents_manager.apps.IncidentsManagerConfig',
     'apps.project_manager.apps.ProjectManagerConfig',
     'apps.notes.apps.NotesConfig',
+    'apps.store.apps.StoreConfig',
     'apps.website.apps.WebsiteConfig',
 ]
 
