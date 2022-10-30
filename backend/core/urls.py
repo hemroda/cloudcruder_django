@@ -20,8 +20,16 @@ from apps.dashboard.views import dashboard
 from apps.website.views import homepage, about
 
 urlpatterns = [
-    path('', homepage, name="homepage"),
-    path('about', about, name="about"),
+    # ADMIN
+    # ------------------------------------------
+    path('admin/', admin.site.urls),
+
+    # API
+    # ------------------------------------------
+    path('api/', include("apps.campaigns.urls")),
+
+    # DASHBOARD
+    # ------------------------------------------
     path('dashboard/', dashboard, name="dashboard_root_path"),
     path('dashboard/campaigns/', include("apps.campaigns.urls")),
     path('dashboard/events/', include("apps.events_manager.urls")),
@@ -29,8 +37,16 @@ urlpatterns = [
     path('dashboard/notes/', include("apps.notes.urls")),
     path('dashboard/tasks/', include("apps.project_manager.urls")),
 
-    path('api/', include("apps.campaigns.urls")),
+    # STORE
+    # ------------------------------------------
+    path('store/products/', include("apps.store.urls")),
 
-    path('admin/', admin.site.urls),
+    # WEBSITE
+    # ------------------------------------------
+    path('', homepage, name="homepage"),
+    path('about', about, name="about"),
+
+    #  TOOLS
+    # ------------------------------------------
     path("__reload__/", include("django_browser_reload.urls")),
 ]
