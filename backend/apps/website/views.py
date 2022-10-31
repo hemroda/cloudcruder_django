@@ -1,13 +1,20 @@
 from datetime import datetime
 from django.shortcuts import render
+from django.views import View
 
 
-def homepage(request):
-    return render(request, "website/homepage.html",
-                  context={"page_title": "Maavita", "name": "John", "footer_date": datetime.today()})
+FOOTER_DATE = datetime.today()
 
 
-def about(request):
-    return render(request, "website/about.html", context={
-        "page_title": "About - Maavita", "footer_date": datetime.today()
-    })
+class HomepageView(View):
+    template_name = "website/homepage.html"
+
+    def get(self, request):
+        return render(request, self.template_name, {"page_title": "Maavita", "footer_date": FOOTER_DATE})
+
+
+class AboutView(View):
+    template_name = "website/about.html"
+
+    def get(self, request):
+        return render(request, self.template_name, {"page_title": "About - Maavita", "footer_date": FOOTER_DATE})

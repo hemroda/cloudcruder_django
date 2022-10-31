@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 from apps.dashboard.views import dashboard
-from apps.website.views import homepage, about
 
 urlpatterns = [
     # ADMIN
@@ -43,8 +42,7 @@ urlpatterns = [
 
     # WEBSITE
     # ------------------------------------------
-    path('', homepage, name="homepage"),
-    path('about', about, name="about"),
+    path("", include("apps.website.urls")),
 
     #  TOOLS
     # ------------------------------------------
