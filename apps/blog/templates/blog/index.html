@@ -7,6 +7,7 @@
     {% for post in post_list %}
       <div class="post">
         <h3>{{ post.title }}</h3>
+        <p>{{ post.author }}</p>
         <p>{{ post.body }}</p>
       </div>
     {% endfor %}

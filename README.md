@@ -22,6 +22,7 @@ To start your servers:
 ## Testing
 
 Run `$ python manage.py test apps/*` . 
+or `$ python manage.py test apps/name_of_th_app`  
 
 
 Enjoy the headaches 😁
