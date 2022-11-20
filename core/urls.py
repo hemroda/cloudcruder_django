@@ -25,5 +25,5 @@ urlpatterns = [
 
     # BLOG
     # ------------------------------------------
-    path("/blog", include("apps.blog.urls")),
+    path("blog", include("apps.blog.urls")),
 ]
