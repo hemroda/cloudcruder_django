@@ -19,4 +19,9 @@ To start your servers:
 `$ python manage.py runserver` to run the django server.  
 
 
+## Testing
+
+Run `$ python manage.py test apps/*` . 
+
+
 Enjoy the headaches 😁
