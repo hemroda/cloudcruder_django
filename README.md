@@ -1,4 +1,4 @@
-Maavita
+CloudCruder
 ===
 
 ## Setting up the app

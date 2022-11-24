@@ -17,7 +17,7 @@ class HomepageTests(SimpleTestCase):
 
     def test_template_content(self):
         response = self.client.get(reverse("website_homepage_path"))
-        self.assertContains(response, "<h1>Maavita</h1>")
+        self.assertContains(response, "<h1>CloudCruder</h1>")
 
 
 class AboutpageTests(SimpleTestCase):
