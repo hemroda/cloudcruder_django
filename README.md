@@ -5,24 +5,30 @@ CloudCruder
 
 Clone the repo.  
 
-Make sure you have python3.11 installed. If not, run: `$ brew install python@3.11`  
-
-Create virtual env `$ python3.11 -m venv .venv`  
-Activate the virtual env `$ source .venv/bin/activate`  
-Install the dependencies `$ pip install -r requirements.txt`  
+First run `$ docker-compose build`  
 
 
 ## Running the app
 
-### Running the servers
-To start your servers:  
-`$ python manage.py runserver` to run the django server.  
-
-
-## Testing
-
-Run `$ python manage.py test apps/*` . 
-or `$ python manage.py test apps/name_of_th_app`  
+Run `$ docker-compose up` then open a browser to `http://127.0.0.1:8000/`  
 
 
 Enjoy the headaches 😁
+
+
+## How to
+
+#### Create apps
+
+Create an empty folder with the apps name first in `backend/apps/name_of_the_app` then run:  
+`$ docker-compose run --rm app sh -c "python manage.py startapp name_of_the_app ./apps/name_of_the_app"`
+
+
+#### Makemigrations 
+
+`$ docker-compose run --rm app sh -c "python manage.py makemigrations"`
+
+
+#### Run Migrations
+
+`$ docker-compose run --rm app sh -c "python manage.py migrate"`
