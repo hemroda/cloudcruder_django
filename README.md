@@ -29,7 +29,7 @@ Create an empty folder with the apps name first in `backend/apps/name_of_the_app
 `$ docker-compose run --rm app sh -c "python manage.py startapp name_of_the_app ./apps/name_of_the_app"`
 
 
-#### Makemigrations 
+#### Makemigrations
 
 `$ docker-compose run --rm app sh -c "python manage.py makemigrations"`
 
@@ -37,3 +37,16 @@ Create an empty folder with the apps name first in `backend/apps/name_of_the_app
 #### Run Migrations
 
 `$ docker-compose run --rm app sh -c "python manage.py migrate"`
+
+
+## Locally test deployment (prod)
+
+```
+docker-compose -f docker-compose-deploy.yml down --volumes
+docker-compose -f docker-compose-deploy.yml build
+docker-compose -f docker-compose-deploy.yml up
+```
+
+#### Create a Superuser when locally testing deployment (prod)
+
+`$ docker-compose -f docker-compose-deploy.yml run --rm app sh -c "python manage.py createsuperuser"`
