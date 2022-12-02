@@ -52,3 +52,14 @@ $ docker-compose -f docker-compose-deploy.yml up
 #### Create a Superuser when locally testing deployment (prod)
 
 `$ docker-compose -f docker-compose-deploy.yml run --rm app sh -c "python manage.py createsuperuser"`
+
+
+## Deploying on AWS EC2
+
+* SSH to the server.
+* Pull the changes, run `$ git pull origin`
+* Run the following commands:
+```
+$ docker-compose -f docker-compose-deploy.yml build app
+$ docker-compose -f docker-compose-deploy.yml up --no-deps -d app
+```
