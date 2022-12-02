@@ -42,10 +42,12 @@ Create an empty folder with the apps name first in `backend/apps/name_of_the_app
 ## Locally test deployment (prod)
 
 ```
-docker-compose -f docker-compose-deploy.yml down --volumes
-docker-compose -f docker-compose-deploy.yml build
-docker-compose -f docker-compose-deploy.yml up
+$ docker-compose -f docker-compose-deploy.yml down --volumes
+$ docker-compose -f docker-compose-deploy.yml build
+$ docker-compose -f docker-compose-deploy.yml up
 ```
+❗️Don't forget to kill the "prod" volumes after testing. (Run the first command)
+
 
 #### Create a Superuser when locally testing deployment (prod)
 
