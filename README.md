@@ -18,6 +18,11 @@ Enjoy the headaches 😁
 
 ## How to
 
+#### Create a Superuser
+
+`$ docker-compose run --rm app sh -c "python manage.py createsuperuser"`
+
+
 #### Create apps
 
 Create an empty folder with the apps name first in `backend/apps/name_of_the_app` then run:  
