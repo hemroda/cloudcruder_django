@@ -1,0 +1,16 @@
+{% extends "website_base.html" %}
+{% load markdown_extras %}
+
+{% block content %}
+<div class="post">
+  <h2>{{ post.title }}</h2>
+  <div class="post-categories-list">
+    {% for category in post.categories.all %}
+      <small>[ {{ category }} ]</small>
+    {% endfor %}
+    <small> - {{ post.author }}</small>
+  </div>
+  <div class="post-intro">{{ post.intro | markdown | safe }}</div>
+  <article>{{ post.body | markdown | safe }}</article>
+</div>
+{% endblock content %}
