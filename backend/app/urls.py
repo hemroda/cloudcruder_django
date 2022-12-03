@@ -27,7 +27,7 @@ urlpatterns = [
 
     # BLOG
     # ------------------------------------------
-    path("blog", include("apps.blog.urls")),
+    path("", include("apps.blog.urls")),
 ]
 
 if settings.DEBUG:
