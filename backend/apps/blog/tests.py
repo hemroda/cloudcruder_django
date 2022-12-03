@@ -30,9 +30,9 @@ class PostTests(TestCase):
         self.assertEqual(response.status_code, 200)
     
     def test_index_page(self):
-        response = self.client.get(reverse("blog_index_path"))
+        response = self.client.get(reverse("blog_list_url"))
         self.assertEqual(response.status_code, 200) 
-        self.assertTemplateUsed(response, "blog/index.html") 
+        self.assertTemplateUsed(response, "blog/post_list.html")
         self.assertContains(response, "Lorem title")
 
     def test_url_exists_at_correct_location_blog_detail_view(self):
@@ -45,4 +45,4 @@ class PostTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(no_response.status_code, 404)
         self.assertContains(response, "Lorem title")
-        self.assertTemplateUsed(response, "blog/detail.html")
+        self.assertTemplateUsed(response, "blog/post_detail.html")

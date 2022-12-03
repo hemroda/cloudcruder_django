@@ -1,7 +1,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #5d5d5d;
+  color: #232323;
 }
 
 .flex-row {
@@ -14,6 +14,37 @@
   justify-content: space-between;
 }
 
+h1 {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2
+}
+
+h2 {
+  font-size: 37px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 23px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
 
 /*
   HEADER
@@ -24,6 +55,7 @@ header {
 }
 
 header .logo-wrapper h1 {
+  font-size: 20px;
   padding: 15px;
 }
 
@@ -37,6 +69,18 @@ header nav ul li {
 
 main {
   padding: 50px 5px 5px 5px;
+}
+
+
+/*
+  Blog
+*/
+.post-list, .post-categories-list {
+  margin: 10px 0;
+}
+
+.post-intro {
+  margin: 20px 0;
 }
 
 

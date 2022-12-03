@@ -1,0 +1,16 @@
+{% extends "website_base.html" %}
+
+{% block content %}
+  <h2 class="main">Blog</h2>
+  <div class="posts">
+    <ul>
+      {% for post in post_list %}
+        {% if post.publish == True %}
+          <div class="post-list">
+            <h5 class="post-title"><a href="{% url 'blog_detail_path' post.pk %}">{{ post.title }}</a></h5>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock content %}
