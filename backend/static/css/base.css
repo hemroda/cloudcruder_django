@@ -4,6 +4,10 @@
   color: #232323;
 }
 
+body {
+  min-height: 100vh;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -12,6 +16,10 @@
 
 .space-between {
   justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
 }
 
 h1 {
@@ -91,10 +99,21 @@ header .logo-wrapper a:hover {
 
 
 /*
+  FOOTER
+*/
+footer {
+  border-top: 1px solid #5d5d5d;
+  margin-top: 100px;
+  padding: 30px 0;
+}
+
+
+/*
   MAIN
 */
 main {
   padding: 50px 5px 5px 5px;
+  min-height: 70vh;
 }
 
 
