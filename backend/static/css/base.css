@@ -45,6 +45,10 @@ a:hover {
   color: #000000;
 }
 
+p {
+  margin: 5px 0;
+}
+
 
 /*
   HEADER
@@ -61,12 +65,21 @@ header .logo-wrapper h1 {
 
 header nav ul {
   width: 250px;
+  justify-content: end;
 }
 
-header nav ul li {
+header div ul.flex-row > li:nth-child(1) {
   margin-right: 20px;
 }
 
+header .logo-wrapper a:hover {
+  text-decoration: none;
+}
+
+
+/*
+  MAIN
+*/
 main {
   padding: 50px 5px 5px 5px;
 }
@@ -98,5 +111,11 @@ main {
   body {
     max-width: 1180px;
     margin: 0 auto;
+  }
+
+  .homepage.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
