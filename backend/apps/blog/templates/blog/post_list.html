@@ -1,9 +1,8 @@
 {% extends "website_base.html" %}
 
 {% block content %}
-  <h2 class="main">Blog</h2>
-  <div class="posts">
-    <ul>
+  <div class="min-h-full">
+    <ul class="flex-col">
       {% for post in post_list %}
         {% if post.publish == True %}
           <div class="post-list">

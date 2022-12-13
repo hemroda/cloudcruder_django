@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-  <div class="homepage intro">
-    <div>
+  <div class="">
+    <div class="intro">
       <p>Hello! 👋
       <p>Welcome on my website.</p>
       <p>I am a Ruby on Rails developer transitioning into "Cloud Engineering".</p>
@@ -11,6 +11,25 @@
       <p>My recent learnings allowed me to dockerized and deployed this Django website on AWS EC2.</p>
       <p>I will use this website to write blog posts when I'll have interesting things to share.</p>
       <p>In the meantime, I use it to keep track of what I learned. 🤷</p>
+    </div>
+
+    <div class="mt-20">
+      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">I’m currently reading</h2>
+
+      <a href="https://www.packtpub.com/product/the-devops-career-handbook/9781803230948" target="_blank">
+      <div class="md:flex mt-8">
+        <img class="m-auto md:m-0 md:w-28 md:mr-6"
+             src="https://static.packt-cdn.com/products/9781803230948/cover/smaller"
+             alt="The DevOps Career Handbook: The ultimate guide to pursuing a successful career in DevOps">
+        <div class="pt-4">
+          <h4 class="hidden md:inline-flex text-2xl font-extrabold tracking-tight text-slate-900">
+            The DevOps Career Handbook:
+          </h4>
+          <h5 class="hidden md:block mt-1 font-bold">The ultimate guide to pursuing a successful career in DevOps</h5>
+          <p class="mt-4">Getting the lay of the land before starting into this new career.</p>
+        </div>
+      </div>
+      </a>
     </div>
   </div>
 {% endblock content %}

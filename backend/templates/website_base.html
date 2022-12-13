@@ -14,27 +14,27 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <title>CloudCruder</title>
-  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header class="flex-row space-between">
+<body class="min-h-screen">
+<header class="max-w-4xl flex justify-between m-auto px-4 py-6 border-b">
   <div class="logo-wrapper">
     <a href="{% url 'website_homepage_path' %}">
       <h1>CloudCruder</h1>
     </a>
   </div>
   <div>
-    <ul class="flex-row">
+    <ul>
       <li><a href="{% url 'blog_list_url' %}">Blog</a></li>
       {#        <li><a href="{% url 'website_about_path' %}">About</a></li>#}
     </ul>
   </div>
 </header>
-<main>
+<main class="max-w-4xl flex justify-between m-auto pt-24 px-6">
   {% block content %} {% endblock content %}
 </main>
-<footer>
+<footer class="max-w-4xl mt-60 m-auto px-2 py-6 border-t">
   <p class="text-center">Made with Grit 😅</p>
 </footer>
 
