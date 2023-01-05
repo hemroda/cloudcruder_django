@@ -18,17 +18,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen">
-<header class="max-w-4xl flex justify-between m-auto px-4 py-6 border-b">
+<header class="max-w-4xl flex justify-between items-center m-auto px-4 py-6 border-b">
   <div class="logo-wrapper">
     <a href="{% url 'website_homepage_path' %}">
       <h1>CloudCruder</h1>
     </a>
   </div>
-  <div>
-    <ul>
-      <li><a href="{% url 'blog_list_url' %}">Blog</a></li>
-      {#        <li><a href="{% url 'website_about_path' %}">About</a></li>#}
-    </ul>
+  <div class="flex items-center">
+    <div class="mr-6">
+      <ul>
+        <li><a href="{% url 'blog_list_url' %}">Blog</a></li>
+        {#        <li><a href="{% url 'website_about_path' %}">About</a></li>#}
+      </ul>
+    </div>
+    <div>
+      {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}!</p>
+        <p><a href="{% url 'logout' %}" class="text-red-600">Log out</a></p>
+      {% else %}
+        <a href="{% url 'login' %}">
+          <button type="button"
+                  class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm
+                      font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2
+                      focus:ring-gray-500 focus:ring-offset-2">
+            Login
+          </button>
+        </a>
+      {% endif %}
+    </div>
   </div>
 </header>
 <main class="max-w-4xl flex justify-between m-auto pt-24 px-6">
