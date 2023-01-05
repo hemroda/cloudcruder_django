@@ -3,14 +3,35 @@
 {% block content %}
   <div class="m-auto place-content-center">
     <form method="post">{% csrf_token %}
-      {{ form.as_p }}
+{#      {{ form.as_p }}#}
+      <div>
+        <div class="flex-col w-full max-w-1xl">
+          <div>
+            <input
+              type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
+                   maxlength="150" required="true" id="id_username" placeholder="your@email.com"
+              class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2
+                     text-gray-900 placeholder-gray-500 focus:z-10 focus:border-gray-500 focus:outline-none
+                     focus:ring-gray-500 sm:text-sm">
+          </div>
+          <div class="mt-4">
+            <input
+              type="password" name="password" autocomplete="current-password" required="true" id="id_password"
+              placeholder="password"
+              class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2
+                     text-gray-900 placeholder-gray-500 focus:z-10 focus:border-gray-500 focus:outline-none
+                     focus:ring-gray-500 sm:text-sm">
+          </div>
+        </div>
+      </div>
       <button
         type="submit"
-        class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-sm font-medium
+        class="inline-flex items-center justify-center w-full rounded-md border border-transparent bg-gray-600 px-4 py-2 text-sm font-medium
               text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500
               focus:ring-offset-2 mt-4">
         Log In
       </button>
+      <input type="hidden" name="next" value="{{ next }}">
     </form>
   </div>
 {% endblock content %}
