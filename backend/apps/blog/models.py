@@ -16,7 +16,7 @@ class PostCategory(models.Model):
 
 class Post(models.Model):
     categories = models.ManyToManyField(PostCategory)
-    author = models.ForeignKey("auth.User", on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey("accounts.CustomUser", on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=250)
     slug = models.SlugField()
     intro = models.TextField()
