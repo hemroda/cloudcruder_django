@@ -52,11 +52,13 @@ Or run `$ docker-compose run --rm app sh -c "python manage.py test apps/name_of_
 
 ## Locally test deployment (prod)
 
-```
+
+```sh
 $ docker-compose -f docker-compose-deploy.yml down --volumes
 $ docker-compose -f docker-compose-deploy.yml build
 $ docker-compose -f docker-compose-deploy.yml up
 ```
+
 ❗️Don't forget to kill the "prod" volumes after testing. (Run the first command)
 
 
@@ -70,7 +72,8 @@ $ docker-compose -f docker-compose-deploy.yml up
 * SSH to the server.
 * Pull the changes, run `$ git pull origin`
 * Run the following commands:
-```
+
+```sh
 $ docker-compose -f docker-compose-deploy.yml build app
 $ docker-compose -f docker-compose-deploy.yml up --no-deps -d app
 ```
