@@ -27,4 +27,3 @@ class SignupPageTests(TestCase):
         self.assertEqual(get_user_model().objects.all().count(), 1)
         self.assertEqual(get_user_model().objects.all()[0].username, "jsmith")
         self.assertEqual(get_user_model().objects.all()[0].email, "jsmith@user.com")
-
