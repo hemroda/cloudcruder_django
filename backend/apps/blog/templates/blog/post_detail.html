@@ -10,7 +10,7 @@
     {% endfor %}
     <small> - {{ post.author }}</small>
   </div>
-  <div class="post-intro">{{ post.intro | markdown | safe }}</div>
+  <div class="post-intro mt-14">{{ post.intro | markdown | safe }}</div>
   <article>{{ post.body | markdown | safe }}</article>
 </div>
 {% endblock content %}
