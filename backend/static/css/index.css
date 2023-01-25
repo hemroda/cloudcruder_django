@@ -4,6 +4,10 @@
   color: #232323;
 }
 
+.post {
+  width: 100%;
+}
+
 .post h1 {
   font-size: 42px;
   font-weight: 400;
@@ -48,6 +52,7 @@
   padding: 5px;
   color: #bbccdd;
   border-radius: 5px;
+  overflow: auto;
 }
 
 .post p code {
