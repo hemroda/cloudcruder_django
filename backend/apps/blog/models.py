@@ -18,7 +18,7 @@ class Post(models.Model):
     categories = models.ManyToManyField(PostCategory)
     author = models.ForeignKey("accounts.CustomUser", on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=250)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     intro = models.TextField()
     body = models.TextField()
     publish = models.BooleanField(default=False)
@@ -29,4 +29,4 @@ class Post(models.Model):
         return f"{self.title} - {self.author}"
 
     def get_absolute_url(self):
-        return reverse("blog_detail_path", kwargs={"pk": self.pk})
+        return reverse("blog_detail_path", kwargs={"slug": self.slug})

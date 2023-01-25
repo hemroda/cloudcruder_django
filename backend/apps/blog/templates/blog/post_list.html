@@ -6,7 +6,9 @@
       {% for post in post_list %}
         {% if post.publish == True %}
           <div class="post-list">
-            <h5 class="post-title hover:font-bold"><a href="{% url 'blog_detail_path' post.pk %}">{{ post.title }}</a></h5>
+            <h5 class="post-title hover:font-bold">
+              <a href="{% url 'blog_detail_path' post.slug %}">{{ post.title }}</a>
+            </h5>
           </div>
         {% endif %}
       {% endfor %}
