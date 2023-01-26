@@ -26,9 +26,9 @@
   </div>
   <div class="flex items-center">
     <div class="mr-6">
-      <ul>
-        <li><a href="{% url 'blog_list_url' %}" class="hover:font-bold">Blog</a></li>
-        {#        <li><a href="{% url 'website_about_path' %}">About</a></li>#}
+      <ul class="flex">
+        <li><a href="{% url 'blog_list_url' %}" class="mr-4 hover:underline">Blog</a></li>
+        {% comment %} <li><a href="{% url 'website_about_path' %}" class="hover:underline">About</a></li> {% endcomment %}
       </ul>
     </div>
     <div>
