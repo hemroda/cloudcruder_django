@@ -3,163 +3,23 @@
 
 {% block content %}
   <div class="w-full subpixel-antialiased">
-    <div class="intro">
-      <p>Hello! 👋
-      <p class="mt-4">Welcome on my website.</p>
-      <p>I am a Ruby on Rails developer interested in few things:</p>
-      <ul class="flex flex-col list-disc mt-2 pl-4">
-        <li><span class="font-semibold">Web development:</span> No suprise, Ruby on Rails related subjects but I do try out other frameworks too.</li>
-        <li><span class="font-semibold">Cloud Engineering:</span> DevOps related subjects for now.</li>
-        <li><span class="font-semibold">NoCode:</span> automating things or testing ideas without a crazy amount of dev time is great.</li>
-        <li><span class="font-semibold">Product Management:</span> coding is great but a product is not just code, does it bring any value to the user?</li>
-      </ul>
-      <p class="mt-2">Yes, I am too curious for my own good. 😏</p>
-    </div>
-
-    <!-- AROUND THE WEB -->
-    <div class="mt-32">
-      <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Me around the web</h2>
-
-      <div class="flex mt-10">
-        <a href="https://github.com/hemroda" target="_blank">
-          <img class="m-auto md:m-0 w-8 mr-4 md:w-10 md:mr-6 hover:p-0.5" src="{% static 'img/github.svg' %}" alt="github logo">
-        </a>
-        <a href="https://www.linkedin.com/in/hemrodamartin/" target="_blank">
-          <img class="m-auto md:m-0 w-8 mr-4 md:w-10 md:mr-6 hover:p-0.5" src="{% static 'img/linkedin.svg' %}" alt="linkedin logo">
-        </a>
-        <a href="https://twitter.com/hemroda" target="_blank">
-          <img class="m-auto md:m-0 w-8 mr-4 md:w-10 md:mr-6 hover:p-0.5" src="{% static 'img/twitter.svg' %}" alt="twitter logo">
-        </a>
-        <a href="{% static 'files/hemroda_martin.pdf' %}" target="_blank">
-          <img class="m-auto md:m-0 w-8 mr-4 md:w-10 md:mr-6 hover:p-0.5" src="{% static 'img/file-text.svg' %}" alt="pdf resume">
-        </a>
-      </div>
-    </div>
-
     <!-- PROJECTS -->
-    <div id="projects" class="mt-32">
-      <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Projects</h2>
+    <div id="projects" class="mt-22">
+      <p class="mb-1 cursor-pointer text-sm font-semibold text-gray-900 hover:text-gray-600">
+        Video of me rubber ducking/calling for help because Ngnix is mean 🥲
+      </p>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+        <iframe src="https://www.loom.com/embed/7340a04da5ed4865a7661b028b6f181d"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+      </div>
+      <p class="mt-1 text-orange-800"><span class="text-orange-800 font-semibold">NB:</span> Of course the ip is no longer the same now 😉</p>
 
       <div class="projects-wrapper">
-        <!-- Creole Corner -->
-        <div class="project flex justify-between mt-10">
-          <div class="w-full">
-            <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 mb-2">Creole Corner</h3>
-            <p class="w-full flex flex-wrap gap-x-2">
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Ruby on Rails
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                PostgreSQL
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Redis
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Sidekiq
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Vanilla CSS
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                TailwindCSS
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Hotwire
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                ViewComponent
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Docker
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                AWS SES
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                AWS S3
-              </span>
-            </p>
-            <p class="mt-4">Website for a Catering service proposing exotic food.</p>
-            <p>Coded and designed the Web/Landing Page and the admin.</p>
-            <p>Admin allows user to manage events, follow communication with customers, and track the website's analitycs thanks to the Ahoy gem and others.</p>
-            <p class="flex justify-end mt-4">
-              <a
-                class="whitespace-nowrap text-sm font-semibold text-sky-500 hover:text-sky-600"
-                href="https://creolecorner.fr" target="_blank">
-                See live site <span aria-hidden="true">→</span>
-              </a>
-            </p>
-          </div>
-        </div>
-        <!-- Casa Laterite -->
-        <div class="project flex justify-between mt-10">
-          <div class="w-full">
-            <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 mb-2">Casa Laterite</h3>
-            <p class="w-full flex flex-wrap gap-x-2">
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Ruby on Rails
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                PostgreSQL
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Redis
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Sidekiq
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                TailwindCSS
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Hotwire
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                ViewComponent
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                Docker
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                AWS SES
-              </span>
-              <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
-                AWS S3
-              </span>
-            </p>
-            <p class="mt-4">
-              Website for managing real estate property for malagasy diaspora, currently limited to those from the South East side of the island.
-            </p>
-            <p>Coded and designed the dashboard section for the owners/investors and the admin section for the users.</p>
-            <p>The Admin allows user to manage the properties and the projects related to the latter, communicate with the owners/investors and track their contributions.</p>
-            <p>The Dashboard allows owners/investors communicate with the team or the community, follow the different projects related to their properties, open incident tickets if any, and track their contributions.</p>
-            {% comment %}
-            <details class="mt-4">
-              <summary class="mb-1 cursor-pointer text-sm font-semibold text-gray-900 hover:text-gray-600">
-                Since the registration is currently invitations only, bellow is a little video presenting of the app.
-              </summary>
-              <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                <iframe src="https://www.loom.com/embed/7340a04da5ed4865a7661b028b6f181d"
-                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                </iframe>
-              </div>
-            </details>
-            {% endcomment %}
-            <p class="flex justify-end mt-4">
-              <a
-                class="whitespace-nowrap text-sm font-semibold text-sky-500 hover:text-sky-600"
-                href="https://laterite.casa" target="_blank">
-                See live site <span aria-hidden="true">→</span>
-              </a>
-            </p>
-          </div>
-        </div>
         <!-- Cloud Cruder -->
         <div class="project flex justify-between mt-10">
           <div class="w-full">
-            <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 mb-2">CloudCruder</h3>
             <p class="w-full flex flex-wrap gap-x-2">
               <span class="relative z-10 mt-2 rounded bg-slate-200 py-1 px-2 font-small text-sm text-gray-600 hover:bg-slate-300 whitespace-nowrap">
                 DevOps
@@ -189,65 +49,9 @@
               zones and records for routing. Also learned to setup HTTPS thanks to the <i>Certificate Manager</i>,
               HTTP Redirect to HTTPS, and create Security Groups.
             </p>
-            <p class="mt-2">I will use this website to write blog posts when I'll have interesting things to share.</p>
-            <p>In the meantime, I use it to keep track of what I learned. 🤷</p>
-            <details class="mt-4">
-              <summary class="mb-1 cursor-pointer text-sm font-semibold text-gray-900 hover:text-gray-600">
-                Video of me rubber ducking/calling for help because Ngnix is mean 🥲
-              </summary>
-              <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                <iframe src="https://www.loom.com/embed/7340a04da5ed4865a7661b028b6f181d"
-                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                </iframe>
-              </div>
-              <p class="mt-1 text-orange-800"><span class="text-orange-800 font-semibold">NB:</span> Of course the ip is no longer the same now 😉</p>
-            </details>
-            <p class="flex justify-end mt-4">
-              <a
-                class="whitespace-nowrap text-sm font-semibold text-sky-500 hover:text-sky-600"
-                href="https://cloudcruder.com" target="_blank">
-                See live site <span aria-hidden="true">→</span>
-              </a>
-            </p>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- READING -->
-    <div class="mt-32">
-      <h2 class="text-3xl font-semibold tracking-tight text-slate-900">I’m currently reading</h2>
-
-      <a href="https://nostarch.com/devops-desperate" target="_blank">
-        <div class="md:flex mt-14 md:mt-10 hover:bg-gray-50">
-          <img class="m-auto md:m-0 md:w-28 md:mr-6"
-              src="https://nostarch.com/sites/default/files/styles/uc_product/public/nsp_series-2021_fullcvr-DevopsfortheDesperate2_final_front.png?itok=cY0TbFlQ"
-              alt="The DevOps Career Handbook: A Hands-On Survival Guide for a career in DevOps">
-          <div class="pt-4">
-            <h4 class="hidden md:inline-flex text-2xl font-semibold tracking-tight text-slate-900">
-              DevOps for the Desperate:
-            </h4>
-            <h5 class="hidden md:block mt-1 font-semibold">A Hands-On Survival Guide</h5>
-            <p class="mt-4">Deploying my dockerized app and manualy creating every service was fun.</p>
-            <p>But now, it is time to find a way to automate the process. 😃</p>
-          </div>
-        </div>
-      </a>
-      <a href="https://pragprog.com/titles/nrclient2/modern-front-end-development-for-rails-second-edition/" target="_blank">
-        <div class="md:flex mt-14 md:mt-10 hover:bg-gray-50">
-          <img class="m-auto md:m-0 md:w-28 md:mr-6"
-               src="https://pragprog.com/titles/nrclient2/modern-front-end-development-for-rails-second-edition/nrclient2-250.jpg"
-               alt="The DevOps Career Handbook: The ultimate guide to pursuing a successful career in DevOps">
-          <div class="pt-4">
-            <h4 class="hidden md:inline-flex text-2xl font-semibold tracking-tight text-slate-900">
-              Modern Front-End Development for Rails 2nd
-            </h4>
-            <h5 class="hidden md:block mt-1 font-semibold">Hotwire, Stimulus, Turbo, and React</h5>
-            <p class="mt-4">Trying not to get too rusty about Rails frontend and Javascript framework/library stuff. 🙈</p>
-          </div>
-        </div>
-        </a>
     </div>
   </div>
 {% endblock content %}
